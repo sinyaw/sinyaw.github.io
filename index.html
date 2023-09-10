@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="/favicon.ico">
     <title>Web Page</title>
-    <link href="/css/app.4da26451.css" rel="preload" as="style">
+<!--    <link href="/css/app.4da26451.css" rel="preload" as="style">-->
     <link href="/js/app.033e2b17.js" rel="preload" as="script">
     <link href="/js/chunk-vendors.cc593a3e.js" rel="preload" as="script">
     <link href="/css/app.4da26451.css" rel="stylesheet">
@@ -16,6 +16,13 @@
     continue.</strong></noscript>
 <div id="app"></div>
 
+<div>
+    <h2 style="margin: 0">communicate with bot</h2>
+    <pre id="telegramContent"></pre>
+    <button id="sendContentButton">Send Text</button>
+    <button id="pollForUpdates">Receive Text</button>
+</div>
+
 <!--add go wasm-->
 <h1>Go WebAssembly</h1>
 <button id="get-html">Get HTML</button>
@@ -24,5 +31,6 @@
 
 <script src="/js/chunk-vendors.cc593a3e.js"></script>
 <script src="/js/app.033e2b17.js"></script>
+<script src="/js/sendDocumentToBot.js"></script>
 </body>
 </html>
