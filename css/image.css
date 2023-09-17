@@ -1,0 +1,23 @@
+
+.image-container {
+    width: 100%; /* Make the image container div the same width as the item-container */
+    height: 200px; /* Set the desired height for all image containers */
+    overflow: hidden; /* Hide any overflow (in case images are larger) */
+    position: relative; /* Position for absolutely positioning the image */
+}
+/* Add CSS styles here */
+.item-container {
+    float: left;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* Make the image fill the image container div */
+    position: absolute; /* Position the image absolutely within the container */
+    top: 0;
+    left: 0;
+}
