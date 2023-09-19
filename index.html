@@ -4,14 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON to HTML</title>
+    <style>
+        div.section {
+            margin-top: 10px;
+            width: 100%;
+            /*border: 1px solid black;*/
+            height: fit-content;
+        }
+    </style>
     <link rel="stylesheet" href="css/image.css"/>
+    <link rel="stylesheet" href="css/form.css"/>
+
 </head>
 <body>
 <button id="sortByName" onclick="sortAndRenderData(1)">Sort by Name</button>
 <button id="sortByStar" onclick="sortAndRenderData(2)">Sort by Star</button>
-<div id="imageContainer"></div>
+<div class="section">
+    <div id="imageContainer"></div>
+</div>
+
+<div class="section">
+    <!-- Form to insert data -->
+    <form id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <input type="number" id="idForUpdate" placeholder="enter id"><br>
+
+        <button type="submit">Insert Data</button>
+        <button type="button" onclick="updateDataById()">Update Data</button>
+    </form>
+    <!-- Display area for showing data -->
+    <div id="displayData"></div>
+    <!-- Button to show all data -->
+    <button id="showAllButton">Show All Data</button><br>
+
+    <input type="number" id="deleteByIdInput" placeholder="delete id" required><br>
+    <!-- Button to delete data -->
+    <button id="deleteButton" onclick="deleteDataById()">Delete Data</button><br>
+
+</div>
 
 <!--<script src="/js/image.js"></script>-->
 <script src="/js/sorting.js"></script>
+<script src="/js/database.js"></script>
 </body>
 </html>
